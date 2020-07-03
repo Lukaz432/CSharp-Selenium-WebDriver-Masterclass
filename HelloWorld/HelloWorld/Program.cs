@@ -24,7 +24,8 @@ namespace HelloWorld
             age = Console.ReadLine();
 
             //concatenate the string
-            string response = "Your name is: " + userFirstName + " and you are " + age + " years old";
+            //string response = "Your name is: " + userFirstName + " and you are " + age + " years old";
+            string response = $"Your name is: {userFirstName} and you are {age} years old";
 
             //write out the response
             Console.WriteLine(response);
