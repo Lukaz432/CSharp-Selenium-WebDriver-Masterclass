@@ -12,23 +12,18 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             //variables
-            string userFirstName;
-            string age;
+            string itemName = "Widget";
+            double pricePerOunce = 17.36;
+            string outputString;
 
-            //ask the user a question
-            Console.WriteLine("What is your first name?");
-            userFirstName = Console.ReadLine();
+            //format output
+            //the {0:C} doesn't show the $ sign in front of pricePerOunce, instead, what it shows is "17,36 ?"
+            outputString = String.Format("{0,10},{1,10}", itemName, pricePerOunce);
 
-            //ask the user their age
-            Console.WriteLine("How old are you?");
-            age = Console.ReadLine();
-
-            //concatenate the string
-            //string response = "Your name is: " + userFirstName + " and you are " + age + " years old";
-            string response = $"Your name is: {userFirstName} and you are {age} years old";
-
-            //write out the response
-            Console.WriteLine(response);
+            //output to the user
+            //we might also input actual strings instead of variables
+            Console.WriteLine(String.Format("{0,10},{1,10}", "Item Name", "Price"));
+            Console.WriteLine(outputString);
         }
     }
 }
